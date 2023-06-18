@@ -25,6 +25,10 @@ body {
   margin-top: 3rem;
 }
 
+button {
+    touch-action: manipulation;
+}
+
 .calc {
   width: 90vmin;
   max-width: 58vh;
