@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: #835b59b1;
+  background-color: #151515;
   color: white;
   display: flex;
   align-items: flex-start;
@@ -30,7 +30,7 @@ body {
   max-width: 58vh;
   aspect-ratio: 1/1.5;
   background-color: var(--main-bg);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
