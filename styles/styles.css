@@ -1,0 +1,106 @@
+:root {
+  --main-bg: #5a2623;
+  --func-bg: #6a3b39;
+  --num-bg: #835b59;
+  --num-click: #b59e9c;
+  --operator-bg: #ff9f0a;
+  --operator-click: #cb7d06;
+  --main-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #835b59b1;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 3rem;
+}
+
+.calc {
+  width: 90vmin;
+  max-width: 58vh;
+  aspect-ratio: 1/1.5;
+  background-color: var(--main-bg);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.calc-result {
+  font-weight: 300;
+  flex: 1;
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.calc-result-text {
+  font-size: 5rem;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.calc-btn {
+  font-weight: 400;
+  flex: 1;
+  font-size: 2.5rem;
+  color: white;
+  outline: 1px solid var(--main-bg);
+  border: none;
+}
+
+.calc-0 {
+  flex: 2;
+}
+
+.calc-func {
+  background-color: var(--func-bg);
+}
+
+.calc-func:active {
+  background-color: var(--num-bg);
+}
+
+.calc-operator {
+  background-color: var(--operator-bg);
+}
+
+.calc-operator:active {
+  background-color: var(--operator-click);
+}
+
+.calc-num {
+  background-color: var(--num-bg);
+}
+
+.calc-num:active {
+  background-color: var(--num-click);
+}
+
+@media (max-width: 450px) {
+  * {
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 650px) {
+  * {
+    font-size: 0.8rem;
+  }
+}
