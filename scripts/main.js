@@ -1,56 +1,78 @@
 let num1 = 0;
-let num2;
 let operand;
-let total = 0;
+let value = 0;
 
 let display;
 let clearBtn;
 
 function Clear() {
-    total = 0;
-    num1 = 0;
-    num2 = undefined;
-    operand = undefined;
-    display.innerText = total;
-    clearBtn.innerText = "AC";
+  value = 0;
+  num1 = 0;
+  operand = "";
+  display.innerText = value;
+  clearBtn.innerText = "AC";
 }
 
 function ChangeSign() {
-    total *= -1;
-    display.innerText = total;
+  value *= -1;
+  display.innerText = value;
 }
 
 function ToPercent() {
-    total /= 100;
-    display.innerText = total;
+  value /= 100;
+  display.innerText = value;
 }
 
 function Operand(op) {
-    if(total === 0) {
-        total = num1;
-        operand = op;
-    }
+  if (operand != "") {
+    return;
+  }
+  operand = op;
+  num1 = value;
+  value = 0;
+}
+
+function Equals() {
+  if (operand === "") {
+    return;
+  }
+  switch (operand) {
+    case "+":
+      value = num1 + value;
+      break;
+    case "-":
+      value = num1 - value;
+      break;
+    case "x":
+      value = num1 * value;
+      break;
+    case "÷":
+      value = num1 / value;
+      break;
+  }
+
+  num1 = value;
+  display.innerText = value;
+  operand = "";
 }
 
 function Number(num) {
-    if(num1 != 0) {
-        display.innerText += num;
-        num1 = parseFloat(display.innerText);
-        console.log("2FUCK");
-    }
-    else {
-        display.innerText = num;
-        num1 = parseFloat(display.innerText);
-        console.log("FUCK");
-    }
-    clearBtn.innerText = "C";
-    console.log(num1);
+  if (value != 0) {
+    display.innerText += num;
+    value = parseFloat(display.innerText);
+  } else {
+    value = parseFloat(num);
+    display.innerText = value;
+  }
+  clearBtn.innerText = "C";
 }
 
+function Add() {}
+
 function main() {
-    display = document.getElementById("calc-result-text");
-    clearBtn = document.getElementById("clear-btn");
-    display.innerText = total;
+  display = document.getElementById("calc-result-text");
+  clearBtn = document.getElementById("clear-btn");
+  display.innerText = value;
 }
 
 main();

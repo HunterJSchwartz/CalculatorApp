@@ -1,48 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Calculator</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        <script src="scripts/main.js" defer> </script>
-    </head>
-    <body>
-        <div class="calc">
-            <div class="row">
-                <div class="calc-result" colspan="4" >
-                    <p id="calc-result-text" class="calc-result-text">100</p>
-                </div>
-            </div>
-            <div class="row">
-                    <button id="clear-btn" class="calc-func calc-btn" onclick="Clear()">AC</button>
-                    <button class="calc-func calc-btn" onclick="ChangeSign()">±</button>
-                    <button class="calc-func calc-btn" onclick="ToPercent()">%</button>
-                    <button onclick="Operand(this.value)" class="calc-operator calc-btn" value="÷">÷</button>
-            </div>
-            <div class="row">
-                    <button onclick="Number(this.value)" class="calc-num calc-btn" value=7>7</button>
-                    <button onclick="Number(this.value)" class="calc-num calc-btn" value=8>8</button>
-                    <button onclick="Number(this.value)" class="calc-num calc-btn" value=9>9</button>
-                    <button class="calc-operator calc-btn">x</button>
-            </div>
-            <div class="row">
-                    <button class="calc-num calc-btn">4</button>
-                    <button class="calc-num calc-btn">5</button>
-                    <button class="calc-num calc-btn">6</button>
-                    <button class="calc-operator calc-btn">-</button>
-            </div>
-            <div class="row">
-                    <button class="calc-num calc-btn">1</button>
-                    <button class="calc-num calc-btn">2</button>
-                    <button class="calc-num calc-btn">3</button>
-                    <button class="calc-operator calc-btn">+</button>
-            </div>
-            <div class="row">
-                <button class="calc-num calc-btn calc-0">0</button>
-                <button onclick="Number(this.value)" class="calc-num calc-btn" value=".">.</button>
-                <button class="calc-operator calc-btn">=</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="row">
+        <div class="calc-result" colspan="4">
+          <p id="calc-result-text" class="calc-result-text">100</p>
         </div>
-    </body>
+      </div>
+      <div class="row">
+        <button id="clear-btn" class="calc-func calc-btn" onclick="Clear()">
+          AC
+        </button>
+        <button class="calc-func calc-btn" onclick="ChangeSign()">±</button>
+        <button class="calc-func calc-btn" onclick="ToPercent()">%</button>
+        <button
+          onclick="Operand(this.value)"
+          class="calc-operator calc-btn"
+          value="÷"
+        >
+          ÷
+        </button>
+      </div>
+      <div class="row">
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="7"
+        >
+          7
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="8"
+        >
+          8
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="9"
+        >
+          9
+        </button>
+        <button
+          onclick="Operand(this.value)"
+          class="calc-operator calc-btn"
+          value="x"
+        >
+          x
+        </button>
+      </div>
+      <div class="row">
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="4"
+        >
+          4
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="5"
+        >
+          5
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="6"
+        >
+          6
+        </button>
+        <button
+          onclick="Operand(this.value)"
+          class="calc-operator calc-btn"
+          value="-"
+        >
+          -
+        </button>
+      </div>
+      <div class="row">
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="1"
+        >
+          1
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="2"
+        >
+          2
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="3"
+        >
+          3
+        </button>
+        <button
+          onclick="Operand(this.value)"
+          class="calc-operator calc-btn"
+          value="+"
+        >
+          +
+        </button>
+      </div>
+      <div class="row">
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn calc-0"
+          value="0"
+        >
+          0
+        </button>
+        <button
+          onclick="Number(this.value)"
+          class="calc-num calc-btn"
+          value="."
+        >
+          .
+        </button>
+        <button onclick="Equals()" class="calc-operator calc-btn">=</button>
+      </div>
+    </div>
+  </body>
 </html>
