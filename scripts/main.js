@@ -33,7 +33,7 @@ function Operand(op) {
 }
 
 function Equals() {
-  if (operand === "") {
+  if (operand != "") {
     return;
   }
   switch (operand) {
