@@ -24,7 +24,7 @@ function ToPercent() {
 }
 
 function Operand(op) {
-  if (operand == op) {
+  if (operand != "") {
     return;
   }
   operand = op;
@@ -33,7 +33,7 @@ function Operand(op) {
 }
 
 function Equals() {
-  if (operand != "") {
+  if (operand === "") {
     return;
   }
   switch (operand) {
